@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="../files/libs/accordion/accordion.css?_v=20230502172440"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link href="../files/libs/datePicker/air-datepicker.css?_v=20230502172440" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" href="css/style.min.css?_v=20230502172440">
+
+  <title>Главная</title>
+</head>
+
+<body id="account" class="" data-lp>
+  <div class="wrapper">
+    <main class="page">
+      <button type="button" class="menu__icon icon-menu icon-sidebar">
+        <span></span>
+      </button>
+      <aside class="sidebar">
+        <div class="sidebar__body">
+          <div class="sidebar__logo">
+            <a href="index.html">
+              <img src="images/icons/logo.svg" alt="" />
+            </a>
+          </div>
+          <div class="sidebar__profile profile">
+            <div class="profile__image">
+              <picture>
+                <source srcset="
+                      images/account/profileImg.jpg    1x,
+                      images/account/profileImg@2x.jpg 2x
+                    " type="image/webp" />
+                <img src="images/account/profileImg.jpg" srcset="" alt="" />
+              </picture>
+            </div>
+            <div class="profile__name">
+              Вячеслав <span>Валентинович</span>
+            </div>
+            <div class="profile__company">ООО Ромашка</div>
+          </div>
+          <div class="sidebar__menu menu">
+            <div class="menu__head">Меню</div>
+            <ul data-tabs class="menu__list tabs">
+              <li class="menu__item">
+                <button data-id="1" type="button" class="menu__link tabs__title _tab-active">
+                  Создать заказ
+                </button>
+              </li>
+              <li class="menu__item">
+                <button data-id="2" type="button" class="menu__link tabs__title">
+                  Ваши заказы
+                </button>
+              </li>
+              <li class="menu__item">
+                <button data-id="3" type="button" class="menu__link tabs__title">
+                  Склад
+                </button>
+              </li>
+              <li class="menu__item">
+                <button data-id="4" type="button" class="menu__link tabs__title">
+                  Управление закупками
+                </button>
+              </li>
+              <li class="menu__item">
+                <button data-id="5" type="button" class="menu__link tabs__title">
+                  Документы
+                </button>
+              </li>
+              <li class="menu__item">
+                <button data-id="6" type="button" class="menu__link tabs__title">
+                  Техподдержка
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="sidebar__exit">
+            <button type="button" class="sidebar__exit-btn">
+              Выйти из ЛК
+            </button>
+          </div>
+        </div>
+      </aside>
+      <section class="main">
+        <div class="main__body">
+          <form class="form" action="" method="">
+            <div class="form__title">
+              <input required class="form__title-input" maxlength="60" type="text" value="Новый заказ" />
+            </div>
+            <div class="form__body">
+              <!-- секция продукта -->
+              <fieldset class="form__row new__product item">
+                <div class="item__content">
+                  <!-- форма  выбора товара-->
+                  <div class="item__image">
+                    <label class="item__label-img" for="imgfile">
+                      <picture><source srcset="images/account/newproduct.webp" type="image/webp"><img src="images/account/newproduct.jpeg" alt="" /></picture>
+                    </label>
+                    <input type="file" id="imgfile" name="imgfile" class="item__input-img" />
+                  </div>
+                  <div class="item__column item__column-catalog">
+                    <div class="item__title">Выбрать товар</div>
+                    <div class="item__row">
+                      <button type="button" data-catalog class="item__get-product">
+                        Выбрать товар
+                      </button>
+                    </div>
+                    <!-- КАТАЛОГ -->
+                    <div class="item__catalog catalog">
+                      <div class="catalog__body">
+                        <input placeholder=" " class="catalog__input" type="search" name="" id="" />
+                        <label class="catalog__label" for="">Поиск</label>
+                        <ul class="catalog__dropdown dropdown accordionjs">
+                          <li>
+                            <div class="dropdown__head accordion-filter">
+                              <span>Категории</span>
+                            </div>
+                            <div class="dropdown__body accordion-filter-body">
+                              <div class="dropdown__category">
+                                <ul class="dropdown__list">
+                                  <li class="dropdown__item">Посуда</li>
+                                  <li class="dropdown__item">кондитерка</li>
+                                  <li class="dropdown__item">категория2</li>
+                                  <li class="dropdown__item">категория2</li>
+                                  <li class="dropdown__item">
+                                    категория2категория2категория2
+                                    категория2категория2
+                                  </li>
+                                  <li class="dropdown__item">категория2</li>
+                                  <li class="dropdown__item">категория2</li>
+                                  <li class="dropdown__item">категория2</li>
+                                  <li class="dropdown__item">категория2</li>
+                                  <li class="dropdown__item">категория2</li>
+                                  <li class="dropdown__item">категория2</li>
+                                  <li class="dropdown__item">категория2</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="dropdown__set-category">
+                          <div class="btn btn-g">Посуда</div>
+                        </div>
+                        <div class="dropdown__new-product">
+                          <div class="btn btn-g">Новый товар</div>
+                        </div>
+                      </div>
+                      <div class="catalog__products">
+                        <ul class="products__list">
+                          <li class="products__item">
+                            <div class="products__image">
+                              <picture><source srcset="images/account/product-image.webp" type="image/webp"><img src="images/account/product-image.jpg" alt="" /></picture>
+                            </div>
+                            <div class="products__name">
+                              СФ прямоугольники АА003 СФ прямоугольники АА003
+                              СФ прямоугольники АА003 СФ прямоугольники АА003
+                              СФ прямоугольники АА003 СФ прямоугольники АА003
+                            </div>
+                          </li>
+                          <li class="products__item">
+                            <div class="products__image">
+                              <picture><source srcset="images/account/product-image.webp" type="image/webp"><img src="images/account/product-image.jpg" alt="" /></picture>
+                            </div>
+                            <div class="products__name">
+                              СФ прямоугольники АА003
+                            </div>
+                          </li>
+                          <li class="products__item">
+                            <div class="products__image">
+                              <picture><source srcset="images/account/product-image.webp" type="image/webp"><img src="images/account/product-image.jpg" alt="" /></picture>
+                            </div>
+                            <div class="products__name">
+                              СФ прямоугольники АА003
+                            </div>
+                          </li>
+                          <li class="products__item">
+                            <div class="products__image">
+                              <picture><source srcset="images/account/product-image.webp" type="image/webp"><img src="images/account/product-image.jpg" alt="" /></picture>
+                            </div>
+                            <div class="products__name">
+                              СФ прямоугольники АА003
+                            </div>
+                          </li>
+                          <li class="products__item">
+                            <div class="products__image">
+                              <picture><source srcset="images/account/product-image.webp" type="image/webp"><img src="images/account/product-image.jpg" alt="" /></picture>
+                            </div>
+                            <div class="products__name">
+                              СФ прямоугольники АА003
+                            </div>
+                          </li>
+                          <li class="products__item">
+                            <div class="products__image">
+                              <picture><source srcset="images/account/product-image.webp" type="image/webp"><img src="images/account/product-image.jpg" alt="" /></picture>
+                            </div>
+                            <div class="products__name">
+                              СФ прямоугольники АА003
+                            </div>
+                          </li>
+                          <li class="products__item">
+                            <div class="products__image">
+                              <picture><source srcset="images/account/product-image.webp" type="image/webp"><img src="images/account/product-image.jpg" alt="" /></picture>
+                            </div>
+                            <div class="products__name">
+                              СФ прямоугольники АА003
+                            </div>
+                          </li>
+                          <li class="products__item">
+                            <div class="products__image">
+                              <picture><source srcset="images/account/product-image.webp" type="image/webp"><img src="images/account/product-image.jpg" alt="" /></picture>
+                            </div>
+                            <div class="products__name">
+                              СФ прямоугольники АА003
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="item__right">
+                    <!-- форма  выбора -->
+                    <div class="item__column product-choose">
+                      <div class="item__title">Размер формы:</div>
+                      <div class="item__select-wrapper">
+                        <input disabled required type="text" class="item__input" />
+                        <div class="item__icon">
+                          <img src="images/account/renameIcon.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- форма  выбора -->
+                    <div class="item__column product-choose">
+                      <div class="item__title">Размер ячейки:</div>
+                      <div class="item__select-wrapper">
+                        <input disabled required type="text" class="item__input" />
+                        <div class="item__icon">
+                          <img src="images/account/renameIcon.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- форма  выбора производителя-->
+                    <div class="item__column item__column-brand product-choose">
+                      <div class="item__title">Производитель:</div>
+                      <div class="item__select-wrapper">
+                        <input disabled required type="text" value="" class="item__input" />
+                        <div class="item__icon">
+                          <img src="images/account/renameIcon.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- форма  выбора времени поставки-->
+                    <div class="item__column item__column-date">
+                      <div class="item__title">Срок поставки</div>
+                      <div class="item__select-wrapper">
+                        <input disabled required readonly="readonly" type="text" value="" autocomplete="off"
+                          class="item__input input-date" />
+                        <div class="item__icon">
+                          <img src="images/account/calendar.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- форма  выбора количества -->
+                    <div class="item__column item__column-count">
+                      <div class="item__title">Кол-во</div>
+                      <div class="item__select-wrapper">
+                        <input disabled type="number" max="3" min="1" value="" class="item__input" />
+                        <div class="item__icon"></div>
+                        <div class="input__count">шт.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="item__remove"></button>
+                </div>
+              </fieldset>
+              <fieldset class="form__row new__product item">
+                <div class="item__content">
+                  <div class="item__image">
+                    <picture><source srcset="images/account/product-image@2x.webp" type="image/webp"><img src="images/account/product-image@2x.jpeg" alt="" /></picture>
+                  </div>
+                  <div class="item__column item__column-catalog">
+                    <div class="item__row">
+                      <div class="item__column item__column-name">
+                        <div class="item__row">
+                          <button type="button" data-catalog class="item__rename"></button>
+                          <div class="item__name">
+                            Селиконовая форма мандарин 20яч.
+                          </div>
+                        </div>
+                        <div class="item__art">Артикул: 00000000001</div>
+                        <div class="item__price">5990.руб</div>
+                      </div>
+                    </div>
+                    <!-- КАТАЛОГ -->
+                    <div class="item__catalog catalog">
+                      <div class="catalog__body">
+                        <input placeholder=" " class="catalog__input" type="search" name="" id="" />
+                        <label class="catalog__label" for="">Поиск</label>
+                        <ul class="catalog__dropdown dropdown accordionjs">
+                          <li>
+                            <div class="dropdown__head accordion-filter">
+                              <span>Категории</span>
+                            </div>
+                            <div class="dropdown__body accordion-filter-body">
+                              <div class="dropdown__category">
+                                <ul class="dropdown__list">
+                                  <li class="dropdown__item">Посуда</li>
+                                  <li class="dropdown__item">кондитерка</li>
+                                  <li class="dropdown__item">категория2</li>
+                                  <li class="dropdown__item">категория2</li>
+                                  <li class="dropdown__item">категория2</li>
+                                  <li class="dropdown__item">категория2</li>
+                                  <li class="dropdown__item">категория2</li>
+                                  <li class="dropdown__item">категория2</li>
+                                  <li class="dropdown__item">категория2</li>
+                                  <li class="dropdown__item">категория2</li>
+                                  <li class="dropdown__item">категория2</li>
+                                  <li class="dropdown__item">категория2</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="dropdown__set-category">
+                          <div class="btn btn-g">Посуда</div>
+                        </div>
+                        <div class="dropdown__new-product">
+                          <div class="btn btn-g">Новый товар</div>
+                        </div>
+                      </div>
+                      <div class="catalog__products">
+                        <ul class="products__list">
+                          <li class="products__item">
+                            <div class="products__image">
+                              <picture><source srcset="images/account/product-image.webp" type="image/webp"><img src="images/account/product-image.jpg" alt="" /></picture>
+                            </div>
+                            <div class="products__name">
+                              СФ прямоугольники АА003
+                            </div>
+                          </li>
+                          <li class="products__item">
+                            <div class="products__image">
+                              <picture><source srcset="images/account/product-image.webp" type="image/webp"><img src="images/account/product-image.jpg" alt="" /></picture>
+                            </div>
+                            <div class="products__name">
+                              СФ прямоугольники АА003
+                            </div>
+                          </li>
+                          <li class="products__item">
+                            <div class="products__image">
+                              <picture><source srcset="images/account/product-image.webp" type="image/webp"><img src="images/account/product-image.jpg" alt="" /></picture>
+                            </div>
+                            <div class="products__name">
+                              СФ прямоугольники АА003
+                            </div>
+                          </li>
+                          <li class="products__item">
+                            <div class="products__image">
+                              <picture><source srcset="images/account/product-image.webp" type="image/webp"><img src="images/account/product-image.jpg" alt="" /></picture>
+                            </div>
+                            <div class="products__name">
+                              СФ прямоугольники АА003
+                            </div>
+                          </li>
+                          <li class="products__item">
+                            <div class="products__image">
+                              <picture><source srcset="images/account/product-image.webp" type="image/webp"><img src="images/account/product-image.jpg" alt="" /></picture>
+                            </div>
+                            <div class="products__name">
+                              СФ прямоугольники АА003
+                            </div>
+                          </li>
+                          <li class="products__item">
+                            <div class="products__image">
+                              <picture><source srcset="images/account/product-image.webp" type="image/webp"><img src="images/account/product-image.jpg" alt="" /></picture>
+                            </div>
+                            <div class="products__name">
+                              СФ прямоугольники АА003
+                            </div>
+                          </li>
+                          <li class="products__item">
+                            <div class="products__image">
+                              <picture><source srcset="images/account/product-image.webp" type="image/webp"><img src="images/account/product-image.jpg" alt="" /></picture>
+                            </div>
+                            <div class="products__name">
+                              СФ прямоугольники АА003
+                            </div>
+                          </li>
+                          <li class="products__item">
+                            <div class="products__image">
+                              <picture><source srcset="images/account/product-image.webp" type="image/webp"><img src="images/account/product-image.jpg" alt="" /></picture>
+                            </div>
+                            <div class="products__name">
+                              СФ прямоугольники АА003
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__right">
+                    <!-- форма  выбора товара-->
+                    <!-- форма  выбора -->
+                    <div class="item__column product-choose">
+                      <div class="item__title">Размер формы:</div>
+                      <div class="item__select-wrapper">
+                        <input required type="text" class="item__input" />
+                        <div class="item__icon">
+                          <img src="images/account/renameIcon.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- форма  выбора -->
+                    <div class="item__column product-choose">
+                      <div class="item__title">Размер ячейки:</div>
+                      <div class="item__select-wrapper">
+                        <input required type="text" class="item__input" />
+                        <div class="item__icon">
+                          <img src="images/account/renameIcon.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- форма  выбора производителя-->
+                    <div class="item__column item__column-brand product-choose">
+                      <div class="item__title">Производитель:</div>
+                      <div class="item__select-wrapper">
+                        <input required type="text" value="" class="item__input" />
+                        <div class="item__icon">
+                          <img src="images/account/renameIcon.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- форма  выбора времени поставки-->
+                    <div class="item__column item__column-date">
+                      <div class="item__title">Срок поставки</div>
+                      <div class="item__select-wrapper">
+                        <input required type="text" readonly="readonly" value="" class="item__input input-date" />
+                        <div class="item__icon item__icon-date">
+                          <img src="images/account/calendar.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- форма  выбора количества -->
+                    <div class="item__column item__column-count">
+                      <div class="item__title">Кол-во</div>
+                      <div class="item__select-wrapper">
+                        <input type="number" max="3" min="1" value="" class="item__input" />
+                        <div class="item__icon"></div>
+                        <div class="input__count">шт.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="item__remove"></button>
+                </div>
+              </fieldset>
+              <div class="form__add-new form__row">
+                <button type="button" class="form__add btn btn-g">
+                  Добавить позицию
+                </button>
+              </div>
+              <ul id="accordion-form" class="accordionjs add-form">
+                <li class="form__row _isFilled">
+                  <div class="form__header">Дополнительные условия</div>
+                  <div>
+                    <fieldset class="form__fieldset fieldset-nice-select">
+                      <div class="form__body">
+                        <div class="form__content">
+                          <div class="form__input-row">
+                            <select name="select1" class="form__input form__select nice-sel">
+                              <option selected disabled hidden>
+                                Условия поставки
+                              </option>
+                              <option value="1">
+                                Далеко-далеко за словесными
+                              </option>
+                              <option value="2">
+                                Далеко-далеко за словесными горами в стране,
+                                гласных и согласных живут рыбные тексты.
+                                Собрал наш это продолжил эта парадигматическая
+                                переписали.
+                              </option>
+                              <option value="3">
+                                Собрал наш это продолжил эта парадигматическая
+                                переписали.
+                              </option>
+                            </select>
+                            <!-- <label class="form__select-label" for="select1">Условия поставки</label> -->
+                          </div>
+                          <div class="form__input-row">
+                            <select name="" class="form__input form__select nice-sel">
+                              <option selected disabled hidden>
+                                Условия поставки
+                              </option>
+                              <option value="1">Далеко-далеко</option>
+                              <option value="2">
+                                Далеко-далеко за словесными горами в стране,
+                                гласных и согласных живут рыбные тексты.
+                                Собрал наш это продолжил эта парадигматическая
+                                переписали.
+                              </option>
+                              <option value="3">
+                                Собрал наш это продолжил эта парадигматическая
+                                переписали.
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+                        <button class="form__save btn btn-g">
+                          Сохранить
+                        </button>
+                      </div>
+                    </fieldset>
+                  </div>
+                </li>
+                <li class="form__row">
+                  <div class="form__header">Частичная предоплата</div>
+                  <div>
+                    <fieldset class="form__fieldset">
+                      <div class="form__body">
+                        <div class="form__content">
+                          <div class="form__input-row">
+                            <div class="form__left">
+                              <input placeholder=" " type="number" name="" id="downpayment" class="form__input" />
+                              <label class="form__label" for="downpayment">Сумма первого взноса</label>
+                            </div>
+                            <div class="form__right">
+                              <input placeholder=" " readonly="readonly" required type="text"
+                                class="form__input input-date" />
+                              <label class="form__label" for="downpayment">00.00.00</label>
+                              <div class="item__icon item__icon-date">
+                                <img src="images/account/calendar.svg" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form__input-row">
+                            <div class="form__left">
+                              <input placeholder=" " type="number" name="" id="downpayment" class="form__input" />
+                              <label class="form__label" for="downpayment">Сумма второго взноса</label>
+                            </div>
+                            <div class="form__right">
+                              <input placeholder=" " readonly="readonly" required type="text"
+                                class="form__input input-date" />
+                              <label class="form__label" for="downpayment">00.00.00</label>
+                              <div class="item__icon item__icon-date">
+                                <img src="images/account/calendar.svg" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="form__save btn btn-g">
+                          Сохранить
+                        </button>
+                      </div>
+                    </fieldset>
+                  </div>
+                </li>
+                <li class="form__row">
+                  <div class="form__header">Доставка по разным адресам</div>
+                  <div>
+                    <fieldset class="form__fieldset">
+                      <div class="form__body">
+                        <div class="form__content">
+                          <div class="form__input-row">
+                            <div class="form__adress">
+                              <div class="form__head">Адрес 1</div>
+                              <div class="form__left">
+                                <input placeholder=" " type="text" name="" id="adress1" class="form__input" />
+                                <label class="form__label" for="adress1">Укажите адрес</label>
+                              </div>
+                              <div class="form__right">
+                                <input placeholder=" " required type="tel" class="form__input" id="tel1" />
+                                <label class="form__label" for="tel1">Телефон</label>
+                              </div>
+                            </div>
+                            <div class="form__adress">
+                              <div class="form__head">Адрес 3</div>
+                              <div class="form__left">
+                                <input placeholder=" " type="text" name="" id="adress1" class="form__input" />
+                                <label class="form__label" for="adress1">Укажите адрес</label>
+                              </div>
+                              <div class="form__right">
+                                <input placeholder=" " required type="tel" class="form__input" id="tel1" />
+                                <label class="form__label" for="tel1">Телефон</label>
+                              </div>
+                            </div>
+                            <button type="button" class="form__add-adress">
+                              Добавить адрес
+                            </button>
+                          </div>
+                          <div class="form__input-row">
+                            <div class="form__adress">
+                              <div class="form__head">Адрес 2</div>
+                              <div class="form__left">
+                                <input placeholder=" " type="text" name="" id="adress2" class="form__input" />
+                                <label class="form__label" for="adress2">Укажите адрес</label>
+                              </div>
+                              <div class="form__right">
+                                <input placeholder=" " required type="tel" class="form__input" id="tel2" />
+                                <label class="form__label" for="tel2">Телефон</label>
+                              </div>
+                            </div>
+                            <button type="button" class="form__add-adress">
+                              Добавить адрес
+                            </button>
+                          </div>
+                        </div>
+                        <button class="form__save btn btn-g">
+                          Сохранить
+                        </button>
+                      </div>
+                    </fieldset>
+                  </div>
+                </li>
+                <li class="form__row">
+                  <div class="form__header">Другое</div>
+                  <div>
+                    <fieldset class="form__fieldset">
+                      <div class="form__body">
+                        <div class="form__content">
+                          <div class="form__input-row">
+                            <textarea placeholder=" " name="" id="comment"
+                              class="form__input form__textarea"></textarea>
+                            <label class="form__label form__label-textarea" for="comment">Ваш комментарий</label>
+                          </div>
+                        </div>
+                        <button class="form__save btn btn-g">
+                          Сохранить
+                        </button>
+                      </div>
+                    </fieldset>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="form__footer">
+              <div class="form__order-price">
+                Ожидаемая стоимость заказа:
+                <div class="form__price">250 000.руб</div>
+              </div>
+              <div class="form__actions">
+                <button type="button" class="form__button btn">
+                  Сохранить
+                </button>
+                <button type="submit" class="form__button btn btn-g">
+                  Подтвердить заказ
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    
+    <footer></footer>
+  </div>
+  <script src="files/libs/swiper/swiper-bundle.min.js?_v=20230502172440"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js?_v=20230502172440"></script>
+<script src="files/libs/select2/dist//js/select2.full.min.js?_v=20230502172440"></script>
+<script src="js/app.min.js?_v=20230502172440"></script>
+
+</body>
+
+</html>
